@@ -84,6 +84,27 @@
         "sys_enc": "UTF-8",
         "sys_lang": "en_US"
     },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Russia": [
+                "https://mirror.yandex.ru/archlinux/$repo/os/$arch",
+                "https://mirror.yal.sl-chat.ru/archlinux/$repo/os/$arch",
+                "https://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
+                "https://mirror.surf/archlinux/$repo/os/$arch",
+                "https://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
+                "https://mirror.kpfu.ru/archlinux/$repo/os/$arch",
+                "https://mirror.kamtv.ru/archlinux/$repo/os/$arch",
+                "http://mirrors.powernet.com.ru/archlinux/$repo/os/$arch",
+                "http://mirror.yandex.ru/archlinux/$repo/os/$arch",
+                "http://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
+                "http://mirror.surf/archlinux/$repo/os/$arch",
+                "http://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
+                "http://mirror.kpfu.ru/archlinux/$repo/os/$arch",
+                "http://mirror.kamtv.ru/archlinux/$repo/os/$arch"
+            ]
+        }
+    },
     "network_config": {
         "type": "nm"
     },
