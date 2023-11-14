@@ -93,7 +93,6 @@
     "packages": [
         "base-devel",
         "intel-ucode",
-        "iwd",
         "openssh",
         "terminus-font",
         "git",
@@ -101,11 +100,7 @@
         "make",
         "man-db",
         "wget",
-        "fish",
-        "vi",
-        "go",
-        "unzip",
-        "python"
+        "vi"
     ],
     "parallel downloads": 0,
     "profile_config": {
