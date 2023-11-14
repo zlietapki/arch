@@ -1,2 +1,3 @@
 #!/bin/sh
+set -e
 archinstall --config 2.6.3_user_configuration.json --creds 2.6.3_user_credentials.json
