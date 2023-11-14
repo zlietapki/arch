@@ -2,19 +2,22 @@
 set -e
 
 # KERNEL
-## kernel opts rotate console disable_IPV6 terminus large font
+echo "Set kernel opts: rotate console, disable_IPV6, terminus large font"
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=".*"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 fbcon=rotate:1 ipv6.disable=1 fbcon=font:TER16x32"/' /etc/default/grub
 
-sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=".*"/GRUB_CMDLINE_LINUX="loglevel=3 fbcon=rotate:1 ipv6.disable=1 fbcon=font:TER16x32"/' /etc/default/grub
+echo "Generate grub config /boot/grub/grub.cfg"
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # openssh
-## permit root login
+echo "SSH: permit root login"
 sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 sed -i 's/#PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config
-# autostart
+
+echo "SSH: autostart"
 systemctl enable sshd.service
 
 # Don't clear boot messages
+echo "Don't clear boot messages: /etc/systemd/system/getty@tty1.service.d/noclear.conf"
 mkdir -p /etc/systemd/system/getty@tty1.service.d
 cat <<EOT>> /etc/systemd/system/getty@tty1.service.d/noclear.conf
 [Service]
