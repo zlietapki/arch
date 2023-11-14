@@ -85,7 +85,7 @@
         "sys_lang": "en_US"
     },
     "network_config": {
-        "type": "iso"
+        "type": "nm"
     },
     "no_pkg_lookups": false,
     "ntp": true,
