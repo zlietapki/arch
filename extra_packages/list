@@ -1,4 +1,9 @@
+bluez
+bluez-utils
+lsd
+
 go
 python
 unzip
-        "fish",
+fish
+tmux

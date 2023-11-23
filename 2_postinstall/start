@@ -23,3 +23,11 @@ cat <<EOT>> /etc/systemd/system/getty@tty1.service.d/noclear.conf
 [Service]
 TTYVTDisallocate=no
 EOT
+
+# network
+systemctl enable NetworkManager.service
+
+# bluetooth
+ln -s ibt-1040-4150.ddc.zst /usr/lib/firmware/intel/ibt-0040-1050.ddc.zst
+ln -s ibt-1040-4150.sfi.zst /usr/lib/firmware/intel/ibt-0040-1050.sfi.zst
+systemctl enable bluetooth.service

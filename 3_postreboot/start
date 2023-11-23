@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+# Network
+
+echo "Connect to MTS_GPON5_92AA"
+nmcli device wifi connect MTS_GPON5_92AA password XTAXNcTb # connect via wifi
+
+echo "Set autoconnect"
+nmcli connection modify MTS_GPON5_92AA connection.autoconnect yes # установить автоподключение
+
+# yay
+cd /opt
+sudo git clone https://aur.archlinux.org/yay-git.git
+sudo chown -R asd:asd yay-git
+cd yay-git/
+makepkg -si
+yay -Suy
