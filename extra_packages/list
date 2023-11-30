@@ -1,9 +1,11 @@
-bluez
-bluez-utils
-lsd
+git
+bluez bluez-utils # bluetooth
 
-go
+lsd
+man
 python
 unzip
 fish
 tmux
+net-tools # netstat
+mdv # markdown cli viewer
